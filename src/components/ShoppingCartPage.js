@@ -63,11 +63,11 @@ const ShoppingCartPage = () => {
     },
   ];
 
-  const handleGenerateBill = () => {
+  /*const handleGenerateBill = () => {
     // Perform bill generation logic here
     // You can navigate to a new page or display a modal with the generated bill
     console.log("Bill generated!");
-  };
+  };*/
 
   return (
     <div className="container">
@@ -92,64 +92,75 @@ const ShoppingCartPage = () => {
       <div className="shopping-cart-container">
         <div className="cart-header">
           <button className="cart-button top-button">Items</button>
-          <button className="cart-button top-button">Add items</button>
+          {/* Remove the following button */}
+          {/* <button className="cart-button top-button">Add items</button> */}
         </div>
         {itemsInCart.length > 0 ? (
-          <>
-            <div className="cart-items">
-              <div className="cart-items-column">
-                {itemsInCart.slice(0, 4).map((item) => (
-                  <div key={item.id} className="cart-item">
-                    <div className="item-details">
-                      <img
-                        className="item-image"
-                        src={item.image}
-                        alt={item.name}
-                      />
-                      <div className="item-name">{item.name}</div>
-                      <div className="item-price">${item.price.toFixed(2)}</div>
-                      <a className="item-link" href={item.link}>
-                        &#10148;
-                      </a>
-                    </div>
-                    <div className="item-description">
-                      This is a description of the item.
-                    </div>
-                  </div>
-                ))}
+          <div className="cart-items">
+            {itemsInCart.map((item) => (
+              <div key={item.id} className="cart-item card ios-like-card">
+                <img className="item-image" src={item.image} alt={item.name} />
+                <div className="item-details">
+                  <div className="item-name">{item.name}</div>
+                  <div className="item-price">${item.price.toFixed(2)}</div>
+                  <a className="item-link" href={item.link}>
+                    &#10148;
+                  </a>
+                </div>
+                <div className="item-description">
+                  This is a description of the item.
+                </div>
               </div>
-              <div className="cart-items-column">
-                {itemsInCart.slice(4, 8).map((item) => (
-                  <div key={item.id} className="cart-item">
-                    <div className="item-details">
-                      <img
-                        className="item-image"
-                        src={item.image}
-                        alt={item.name}
-                      />
-                      <div className="item-name">{item.name}</div>
-                      <div className="item-price">${item.price.toFixed(2)}</div>
-                      <a className="item-link" href={item.link}>
-                        &#10148;
-                      </a>
-                    </div>
-                    <div className="item-description">
-                      This is a description of the item.
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <button
-              className="generate-bill-button"
-              onClick={handleGenerateBill}
-            >
-              Generate Bill
-            </button>
-          </>
+            ))}
+          </div>
         ) : (
           <p className="empty-cart-message">Your shopping cart is empty.</p>
         )}
+        {/* Remove the following form */}
+        {/* <div className="add-new-item-form card">
+          <h2>Add New Item</h2>
+          <form onSubmit={handleAddItem}>
+            <div className="form-input">
+              <label htmlFor="newItemName">Item Name:</label>
+              <input
+                type="text"
+                id="newItemName"
+                value={newItemName}
+                onChange={(e) => setNewItemName(e.target.value)}
+              />
+            </div>
+            <div className="form-input">
+              <label htmlFor="newItemPrice">Item Price:</label>
+              <input
+                type="text"
+                id="newItemPrice"
+                value={newItemPrice}
+                onChange={(e) => setNewItemPrice(e.target.value)}
+              />
+            </div>
+            <div className="form-input">
+              <label htmlFor="newItemImage">Item Image URL:</label>
+              <input
+                type="text"
+                id="newItemImage"
+                value={newItemImage}
+                onChange={(e) => setNewItemImage(e.target.value)}
+              />
+            </div>
+            <div className="form-input">
+              <label htmlFor="newItemLink">Item Link:</label>
+              <input
+                type="text"
+                id="newItemLink"
+                value={newItemLink}
+                onChange={(e) => setNewItemLink(e.target.value)}
+              />
+            </div>
+            <button type="submit" className="add-button ios-like-button">
+              {newItemName ? "Update Item" : "Add Item"}
+            </button>
+          </form>
+        </div> */}
       </div>
       <div className="section-recent-items">
         <h2>Recent Items</h2>
@@ -158,4 +169,5 @@ const ShoppingCartPage = () => {
     </div>
   );
 };
+
 export default ShoppingCartPage;
