@@ -14,7 +14,7 @@ const CreateBillPage = () => {
   };
 
   return (
-    <div className="container" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
+    <div className="container" style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "80vh" }}>
       <div className="invoice-container" ref={documentRef} id="html">
         <table style={{ width: "100%", height: "auto", textAlign: "center" }}>
           <thead style={{ background: "#fafafa", padding: "8px" }}>
