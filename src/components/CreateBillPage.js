@@ -41,7 +41,7 @@ const CreateBillPage = () => {
               <td style={{ width: "25%", fontSize: "12px", fontWeight: "700", padding: "0px 0px 10px 0px" }}>Shipping Address</td>
             </tr>
             <tr style={{ backgroundColor: "#fff", fontSize: "12px", color: "#262626" }}>
-              <td style={{ borderRight: "1.5px dashed  #DCDCDC", width: "25%", fontWeight: "bold", background: "#fafafa" }}>11.07.2021</td>
+              <td style={{ borderRight: "1.5px dashed  #DCDCDC", width: "25%", fontWeight: "bold", background: "#fafafa" }}>11.07.2023</td>
               <td style={{ borderRight: "1.5px dashed  #DCDCDC", width: "25%", fontWeight: "bold", background: "#fafafa" }}>000000001</td>
               <td style={{ borderRight: "1.5px dashed  #DCDCDC", width: "25%", fontWeight: "bold", background: "#fafafa" }}>CASH</td>
               <td style={{ width: "25%", fontWeight: "bold", background: "#fafafa" }}>Kosovo, Prishtina</td>
@@ -136,13 +136,10 @@ const CreateBillPage = () => {
             <tr>
               <td colSpan="2" style={{ fontWeight: "bold" }}><span style={{ color: "#c61932", fontWeight: "bold" }}>THANK YOU</span> for shipping with us!</td>
             </tr>
-            <tr>
-              <td colSpan="2" style={{ fontWeight: "bold", textAlign: "left", padding: "5px 0px 0px 00px", fontSize: "14px" }}>THRED<span>+</span> team</td>
-            </tr>
           </tbody>
           <tfoot style={{ paddingTop: "20px", fontWeight: "bold" }}>
             <tr>
-              <td style={{ paddingTop: "20px" }}>Need help? Contact us <span style={{ color: "#c61932" }}> info@thred-plus.shop </span></td>
+              <td style={{ paddingTop: "20px" }}>Need help? Contact us <span style={{ color: "#c61932" }}> virajdevkar@gmail.com </span></td>
             </tr>
           </tfoot>
         </table>
